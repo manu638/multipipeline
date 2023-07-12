@@ -1,0 +1,15 @@
+node('master')
+{
+    stage('s1') 
+  {
+    git 'https://github.com/BABJI-AWS-DEVOPS/BATCH45VENUWARFILE.git'
+  }
+}
+node('master') 
+{
+    stage('s2')
+  {
+    sh 'mvn package'
+  }
+
+}
